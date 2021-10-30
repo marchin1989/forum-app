@@ -11,11 +11,8 @@ main() {
   # nginxインストール
   sudo apt install -y nginx
 
-  # 起動
-  systemctl status nginx
-
   # pipをインストール
-  sudo apt install python3-pip
+  sudo apt install -y python3-pip
 
   # uvicornのインストール
   pip install uvicorn
@@ -30,7 +27,7 @@ main() {
   pip install fastapi
 
   # mysqlのインストール
-  sudo apt install mysql-server mysql-client
+  sudo apt install -y mysql-server mysql-client
 
   # データベースの初期化
   sudo mysql -u root < init.ddl
