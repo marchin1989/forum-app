@@ -14,7 +14,7 @@ def json_serial(obj):
 
 app = FastAPI()
 
-@app.get("/items")
+@app.get("/api/items")
 def read_item():
     # dbに接続
     cnx = mysql.connector.connect(user='mysql', host='127.0.0.1', password="password", database='forum')
@@ -32,6 +32,6 @@ def read_item():
 
     return {"item_id": item_id, "q": q}
 
-@app.get("/items/{item_id}")
+@app.get("/api/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}

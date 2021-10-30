@@ -36,7 +36,7 @@ main() {
   pip install mysql-connector-python
 
   # uvicorn起動
-  uvicorn main:app --reload
+  uvicorn app.main:app --reload
 }
 
 main
