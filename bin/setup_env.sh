@@ -6,8 +6,10 @@ set -o pipefail
 set -o xtrace
 
 main() {
+  sudo apt update
+
   # nginxインストール
-  sudo apt install nginx
+  sudo apt install -y nginx
 
   # 起動
   systemctl status nginx
